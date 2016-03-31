@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<head>
+		<title>Add a skill</title>
+	</head>
+	<body>
+		<h1>Add a skill</h1>
+		<t:form t:id="add_skill_form" accept-charset="iso-8859-1">
+			<fieldset>
+				<legend>New skill</legend>
+				<t:errors />
+				<p>
+					<t:label for="skillName">Name</t:label>&nbsp;
+					<t:textfield t:id="skillName" t:value="skill.name" t:validate="required" />
+				</p>
+				<p>
+					<t:submit t:id="submit" value="Submit" />
+				</p>
+			</fieldset>
+		</t:form>
+		<p>
+			<t:pagelink page="skills/Index">Cancel</t:pagelink>
+		</p>
+	</body>
+</html>

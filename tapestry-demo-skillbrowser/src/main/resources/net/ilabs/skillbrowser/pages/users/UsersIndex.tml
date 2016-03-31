@@ -1,0 +1,25 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Users</title>
+	</head>
+	<body>
+		<h1>Users</h1>
+		<ul>
+			<li t:type="loop" t:source="userList" t:value="user">
+				${user.fullname}
+				- <t:pagelink page="users/Save" context="user.userId">Edit</t:pagelink>
+				- <t:pagelink page="users/Skills" context="user.userId">Skills</t:pagelink>
+				- <t:actionlink t:id="deleteUser" context="user.userId">Delete</t:actionlink>
+			</li>
+		</ul>
+		<p>
+			<t:pagelink page="users/Save">New user</t:pagelink>
+		</p>
+		<p>
+			<t:pagelink page="index">Back</t:pagelink>
+		</p>
+	</body>
+</html>

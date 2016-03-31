@@ -1,0 +1,17 @@
+link 
+===============
+http://loic-frering.developpez.com/tutoriels/java/hibernate-jpa-spring-tapestry/#L3
+
+
+
+TODO
+===============
+
+rename project -> Tapestry-tuto-skillbrowser
+
+push on github
+
+
+
+
+

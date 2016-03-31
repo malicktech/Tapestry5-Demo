@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<head>
+		<title>Skills</title>
+	</head>
+	<body>
+		<h1>Skills</h1>
+		<ul>
+			<li t:type="loop" t:source="skillList" t:value="skill">
+				${skill.name}
+				- <t:pagelink page="skills/Save" context="skill.skillId">Edit</t:pagelink>
+				- <t:actionlink t:id="deleteSkill" context="skill.skillId">Delete</t:actionlink>
+			</li>
+		</ul>
+		<p>
+			<t:pagelink page="skills/Save">New skill</t:pagelink>
+		</p>
+		<p>
+			<t:pagelink page="index">Back</t:pagelink>
+		</p>
+	</body>
+</html> 

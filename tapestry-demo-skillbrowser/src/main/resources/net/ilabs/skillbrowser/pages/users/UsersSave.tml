@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<head>
+		<title>Add a user</title>
+	</head>
+	<body>
+		<h1>Add a user</h1>
+		<t:form t:id="add_user_form">
+			<fieldset>
+				<legend>New user</legend>
+				<t:errors />
+				<p>
+					<t:label for="userFullname">Fullname</t:label>&nbsp;
+					<t:textfield t:id="userFullname" t:value="user.fullname" t:validate="required" />
+				</p>
+				<p>
+					<t:label for="userLogin">Login</t:label>&nbsp;
+					<t:textfield t:id="userLogin" t:value="user.login" t:validate="required" />
+				</p>
+				<p>
+					<t:label for="userPassword">Password</t:label>&nbsp;
+					<t:textfield t:id="userPassword" t:value="user.password" t:validate="required" />
+				</p>
+				<p>
+					<t:submit t:id="submit" value="Submit" />
+				</p>
+			</fieldset>
+		</t:form>
+		<p>
+			<t:pagelink page="users/Index">Cancel</t:pagelink>
+		</p>
+	</body>
+</html>

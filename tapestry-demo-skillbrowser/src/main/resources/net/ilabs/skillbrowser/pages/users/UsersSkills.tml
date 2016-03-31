@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_0_0.xsd">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Skills for ${user.fullname}</title>
+	</head>
+	<body>
+		<h1>Skills for ${user.fullname}</h1>
+ 
+		<!-- Using a block that will not load all skills in the page until the actionlink addSkills is clicked -->
+		<t:block t:id="addSkillsBlock">
+			<fieldset xmlns="http://www.w3.org/1999/xhtml">
+				<t:loop source="skills" value="skill">
+					<t:actionlink t:id="addSkill" t:zone="userSkillsZone" context="skill.skillId">${skill.name}</t:actionlink>&nbsp;
+				</t:loop>
+				<div style="text-align: right;"><t:actionlink t:id="hideSkills">Hide</t:actionlink></div>
+			</fieldset>
+		</t:block>
+		<t:zone t:id="addSkillsZone" />
+ 
+		<t:zone t:id="userSkillsZone">
+			<ul xmlns="http://www.w3.org/1999/xhtml">
+				<li t:type="loop" t:source="userSkills" t:value="skill">
+					${skill.name}
+					- <t:actionlink t:id="deleteUserSkill" t:zone="userSkillsZone" context="skill.skillID">Delete</t:actionlink>
+				</li>
+			</ul>
+		</t:zone>
+ 
+		<p>
+			<t:actionlink t:id="addSkills" t:zone="addSkillsZone">Add skills</t:actionlink>
+		</p>
+ 
+		<p>
+			<t:pagelink page="users/Index">Back</t:pagelink>
+		</p>
+ 
+	</body>
+</html>
