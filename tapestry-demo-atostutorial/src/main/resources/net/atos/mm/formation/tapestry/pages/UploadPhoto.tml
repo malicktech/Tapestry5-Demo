@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+	<head>
+		<meta name="copyright" content="Atos Origin" />
+		<title>Add a photo to the user</title>
+		<style type="text/css">@import url(${asset:context:static/css/style.css});</style>
+	</head>
+
+	<body>
+
+		<p t:type="banner" />
+
+		<form t:type="form" t:id="uploadPhotoForm" id="uploadPhotoForm" method="post">
+			
+			<p><span t:type="errors" /></p>
+
+			<fieldset id="fsGeneral">
+				<p><label for="photoPath">Photo path</label> <input t:type="upload" t:id="file" type="file" id="photoPath" t:disabled="maxAttemptsExceeded" t:validate="required,extensionValidator=.png:.gif:.jpg:.jpeg" /></p>
+			</fieldset>
+
+			<fieldset id="fsSubmit">
+				<p><input t:clientId="btSubmit" t:type="submit" value="Submit" t:disabled="maxAttemptsExceeded" /></p>
+			</fieldset>
+
+			<p><span class="commts">&lt;&lt;&nbsp;<a t:type="pagelink" t:page="main">Back to main page</a></span></p>
+
+		</form>
+
+
+	</body>
+
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+	<head>
+		<meta name="copyright" content="Atos Origin" />
+		<title>Welcome Page</title>
+		<style type="text/css">@import url(${asset:context:static/css/style.css});</style>
+	</head>
+
+	<body>
+
+		<p><img src="${asset:context:static/images/logo.gif}" /></p>
+
+		<p>${message:welcome} (Session Start : ${sessionStart})</p>
+		
+		<p>
+<!-- 			<a t:type="actionlink" t:id="hilo">Start Hilo Game</a> -->
+				<t:actionlink t:id="hilo">Start Hilo Game</t:actionlink>
+			
+			<span t:type="if" t:test="lastHiloMessage">
+				(${messageFromHilo})
+			</span>
+		</p>
+
+		<p><a t:type="pagelink" t:page="login">${message:enter}</a></p>
+
+	</body>
+
+</html>
