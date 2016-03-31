@@ -8,7 +8,7 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>tapestry-demo-tutorial1</artifactId>
+	<artifactId>tapestry-demo-gs-tutorial</artifactId>
 	<name>tutorial1 Tapestry 5 Application</name>
 	<packaging>war</packaging>
 

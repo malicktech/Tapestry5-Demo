@@ -31,7 +31,7 @@
 	<!-- ============================================================================================== -->
 	<modules>
 		<module>tapestry-demo-atostutorial</module>
-		<module>tapestry-demo-officialtutorial</module>
+		<module>tapestry-demo-gs-tutorial</module>
 		<module>tapestry-demo-skillbrowser</module>
 	</modules>
 
