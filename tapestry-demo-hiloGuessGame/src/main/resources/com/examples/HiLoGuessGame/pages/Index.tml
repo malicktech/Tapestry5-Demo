@@ -1,0 +1,16 @@
+<html t:type="layout" title="HiLoGuessGame Index"
+	xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd">
+
+
+<p>
+	[
+	<t:pagelink page="Index">refresh page</t:pagelink>
+	]
+</p>
+<p>I'm thinking of a number between one and ten ... 10 or 20</p>
+
+<p>
+	<t:actionlink t:id="start">start guessing</t:actionlink>
+</p>
+
+</html>

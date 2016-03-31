@@ -33,6 +33,7 @@
 		<module>tapestry-demo-atostutorial</module>
 		<module>tapestry-demo-gs-tutorial</module>
 		<module>tapestry-demo-skillbrowser</module>
+		<module>tapestry-demo-hiloGuessGame</module>
 	</modules>
 
 	<!-- DEPENDENCIES -->

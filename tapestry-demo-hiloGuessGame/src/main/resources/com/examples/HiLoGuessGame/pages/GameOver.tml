@@ -1,0 +1,19 @@
+<html t:type="layout" title="Game Over"
+    xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+    xmlns:p="tapestry:parameter">
+ 
+    <p>
+        You guessed the number
+        <strong>${target}</strong>
+        in
+        <strong>${guessCount}</strong>
+        guesses.
+    </p>
+    
+    <p>
+	[
+	<t:pagelink page="Index">Index page</t:pagelink>
+	]
+</p>
+   
+</html>
